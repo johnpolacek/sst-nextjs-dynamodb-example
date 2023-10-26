@@ -1,0 +1,378 @@
+{
+  "version": "34.0.0",
+  "artifacts": {
+    "johnpolacek-sst-nextjs-dynamodb-example-Site.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "johnpolacek-sst-nextjs-dynamodb-example-Site.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "johnpolacek-sst-nextjs-dynamodb-example-Site": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://202587717710/us-east-1",
+      "properties": {
+        "templateFile": "johnpolacek-sst-nextjs-dynamodb-example-Site.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "sst:app": "sst-nextjs-dynamodb-example",
+          "sst:stage": "johnpolacek"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::202587717710:role/cdk-hnb659fds-deploy-role-202587717710-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::202587717710:role/cdk-hnb659fds-cfn-exec-role-202587717710-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-202587717710-us-east-1/fd4ff9f33490c9cf92f84128fe363078493f9e8b259a957db905e08be1f76be0.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "johnpolacek-sst-nextjs-dynamodb-example-Site.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::202587717710:role/cdk-hnb659fds-lookup-role-202587717710-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "johnpolacek-sst-nextjs-dynamodb-example-Site.assets"
+      ],
+      "metadata": {
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "sst:app",
+                "Value": "sst-nextjs-dynamodb-example"
+              },
+              {
+                "Key": "sst:stage",
+                "Value": "johnpolacek"
+              }
+            ]
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/CustomResourceHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomResourceHandlerServiceRole41AEC181"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/CustomResourceHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomResourceHandlerE8FB56BA"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/S3Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3Bucket2B2851F3"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/S3Bucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3BucketPolicyBB4DF05F"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/S3Bucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3BucketAutoDeleteObjectsCustomResource3E10A2DE"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/CloudFrontFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteCloudFrontFunctionE91DD486"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ServerFunction/AssetReplacerPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionAssetReplacerPolicy304BF125"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ServerFunction/AssetReplacer/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionAssetReplacer9A11D516"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ServerFunction/ServerFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionServiceRole8328A688"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ServerFunction/ServerFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionServiceRoleDefaultPolicy6EA49472"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ServerFunction/ServerFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunction6DFA6F1B"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ServerFunction/ServerFunction/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionLogRetention7123678D"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ServerFunction/ServerFunction/FunctionUrl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionFunctionUrl1B09C490"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ServerFunction/ServerFunction/invoke-function-url": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctioninvokefunctionurlEABB57E1"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ImageFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteImageFunctionServiceRoleAD5B95E2"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ImageFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteImageFunctionServiceRoleDefaultPolicy39F33332"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ImageFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteImageFunctionD6B403E9"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ImageFunction/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteImageFunctionLogRetentionD1B5BECE"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ImageFunction/FunctionUrl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteImageFunctionFunctionUrl110B87E7"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ImageFunction/invoke-function-url": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteImageFunctioninvokefunctionurl443403A1"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/S3UploaderPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3UploaderPolicyE1EE6C9F"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/S3Uploader/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteS3UploaderCAFDFF58"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ServerCache/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerCacheDD54ACDF"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/Distribution/Origin3/S3Origin/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteDistributionOrigin3S3Origin7C72BBD7"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/Distribution/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteDistribution706F5265"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/ServerFunctionInvalidatorPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionInvalidatorPolicy004B2ED1"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/CloudFrontInvalidatorPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteCloudFrontInvalidatorPolicyEE18C654"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/CloudFrontInvalidator/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteCloudFrontInvalidator18BEA866"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationQueue355EB7DA"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationFunctionServiceRole02D71DA1"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationFunctionServiceRoleDefaultPolicy57C55CA4"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationFunctionEB84F6D0"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationFunction/SqsEventSource:johnpolaceksstnextjsdynamodbexampleSitesiteRevalidationQueue04EB0D33/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationFunctionSqsEventSourcejohnpolaceksstnextjsdynamodbexampleSitesiteRevalidationQueue04EB0D3353F105C0"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationTable79579F77"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationInsertFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationInsertFunctionServiceRole5EAB97F1"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationInsertFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationInsertFunctionServiceRoleDefaultPolicy6656C2D6"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationInsertFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationInsertFunction4388DE95"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationProvider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationProviderframeworkonEventServiceRoleD8931DDF"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationProvider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationProviderframeworkonEventServiceRoleDefaultPolicy2EE9A030"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationProviderframeworkonEvent86FF741C"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationProvider/framework-onEvent/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationProviderframeworkonEventLogRetentionCDB525DA"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/RevalidationResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteRevalidationResource8ECA617A"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/site/Parameter_url/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteParameterurl3D1716BC"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/SSTStackOutputSiteUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SiteUrl"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/SSTStackOutputSSTMetadata": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSTMetadata"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/johnpolacek-sst-nextjs-dynamodb-example-Site/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "johnpolacek-sst-nextjs-dynamodb-example-Site"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
